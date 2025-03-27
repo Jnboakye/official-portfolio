@@ -89,11 +89,11 @@ window.addEventListener('scroll', function () {
 });
 
 
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+// const hamburgerBtn = document.getElementById('hamburger-btn');
+// const mobileMenu = document.getElementById('mobile-menu');
 
-hamburgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+// hamburgerBtn.addEventListener('click', () => {
+//     mobileMenu.classList.toggle('hidden');
+// });
 
 
