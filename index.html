@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,495 +11,309 @@
     <script src="scripts/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-
-<body class="bg-[#302d2d] text-white font-[Montserrat Alternates]">
-    <!--This is a nav bar-->
-    <nav class=" items-center pt-3 fixed w-full justify-center bg-[#302d2d] border-solid">
-        <div class=" h-15 items-center flex flex-row justify-between px-6 md:px-10 lg:px-20">
-            <div>
-                <a href="index.html" class="text-xl font-extrabold text-7xl"><span
-                        class="text-[#a88172] font-extrabold">&lt;</span>Jeffrey!<span
-                        class="text-[#a88172] font-extrabold">/&gt;</span></a>
+<body class="bg-[#302d2d] text-white font-[Montserrat_Alternates]">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-[#302d2d] z-10">
+        <div class="flex items-center justify-between px-4 md:px-10 lg:px-20 py-4">
+            <a href="index.html" class="text-2xl md:text-4xl font-extrabold"><span class="text-[#a88172]"><</span>Jeffrey!<span class="text-[#a88172]">/></span></a>
+            <div class="hamburger md:hidden flex flex-col cursor-pointer" id="hamburger">
+                <span class="w-6 h-1 bg-white mb-1"></span>
+                <span class="w-6 h-1 bg-white mb-1"></span>
+                <span class="w-6 h-1 bg-white"></span>
             </div>
-
-            <div>
-                <ul class="flex flex-row gap-4 md:gap-6 lg:gap-10">
-                    <li><a href="#home-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Home</span></a>
-                    </li>
-                    <li><a href="#about-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>About</span></a>
-                    </li>
-                    <li><a href="#resume-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Resume</span></a>
-                    </li>
-                    <li><a href="#services-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Services</span></a>
-                    </li>
-                    <li><a href="#skills-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Skills</span></a>
-                    </li>
-                    <li><a href="#projects-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Projects</span></a>
-                    </li>
-                    <li><a href="#contact-section"
-                            class="nav-link relative hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200"><span>Contact</span></a>
-                    </li>
-                </ul>
-            </div>
-
+            <ul class="nav-links hidden md:flex flex-row gap-4 md:gap-6 lg:gap-10">
+                <li><a href="#home-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Home</a></li>
+                <li><a href="#about-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">About</a></li>
+                <li><a href="#resume-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Resume</a></li>
+                <li><a href="#services-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Services</a></li>
+                <li><a href="#skills-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Skills</a></li>
+                <li><a href="#projects-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Projects</a></li>
+                <li><a href="#contact-section" class="nav-link hover:border-b-2 hover:border-[#a88172] pb-1 transition-colors duration-200">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!--This is the hero section-->
-    <section class="mb-5" id="home-section">
-        <div
-            class="h-screen bg-cover w-full flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-10 lg:px-20">
-            <div class="flex flex-col gap-3 text-center md:text-left w-full md:w-1/2 lg:w-1/2">
-                <p class="text-xl mb-3 text-[#a88172] font-semibold">HELLO!</p>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl">I'm <span
-                        class="text-[#a88172] font-extrabold">Jeffrey</span></h1>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl text-[#a88172] font-extrabold">Nana Boakye</h1>
-                <p class="text-2xl md:text-3xl"><span class="multiple"></span></p>
-                <div class="mt-3 flex flex-col md:flex-row gap-5 justify-center md:justify-start">
-                    <a href="#contact-section">
-                        <button
-                            class="hire-button bg-[#a88172] text-white font-semibold py-3 px-6 h-12 w-full md:w-40 rounded-3xl shadow-md pulse-animation border-white border">HIRE
-                            ME</button>
+    <!-- Hero Section -->
+    <section id="home-section" class="pt-20 md:pt-24 min-h-screen flex items-center justify-center">
+        <div class="flex flex-col md:flex-row items-center gap-6 px-4 md:px-10 lg:px-20 w-full max-w-7xl">
+            <div class="flex flex-col gap-4 text-center md:text-left w-full md:w-1/2">
+                <p class="text-lg md:text-xl text-[#a88172] font-semibold">HELLO!</p>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold">I'm <span class="text-[#a88172]">Jeffrey</span></h1>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl text-[#a88172] font-extrabold">Nana Boakye</h1>
+                <p class="text-lg md:text-2xl"><span class="multiple"></span></p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start mt-4">
+                    <a href="#contact-section"><button class="hire-button bg-[#a88172] text-white font-semibold py-2 px-6 rounded-3xl border-white border w-full md:w-36">HIRE ME</button></a>
+                    <a href="#projects-section"><button class="rounded-3xl py-2 px-6 w-full md:w-36 text-white border-white border hover:bg-[#a88172] font-bold">MY WORKS</button></a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img class="w-full h-auto opacity-60 object-cover" src="./images/image1.png" alt="Image of Jeffrey">
+            </div>
+        </div>
+    </section>
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- About Section -->
+    <section id="about-section" class="min-h-screen flex items-center justify-center">
+        <div class="flex flex-col md:flex-row items-center gap-6 px-4 md:px-10 lg:px-20 w-full max-w-7xl">
+            <div class="w-full md:w-1/3">
+                <img class="w-full h-auto rounded-lg" src="./images/border-image2.png" alt="Image of Jeffrey">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col gap-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">About Me</h2>
+                <p class="text-base md:text-lg">I am a Web Developer skilled in both front-end and back-end development...</p>
+                <p class="text-base md:text-lg">In addition to web development, I have experience in network optimization...</p>
+                <p class="text-lg md:text-xl"><span class="font-bold text-[#a88172]">20</span> Projects completed</p>
+                <a href="#projects-section"><button class="rounded-3xl py-2 px-6 w-full md:w-36 text-white bg-[#a88172] font-bold">View Projects</button></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- Resume -->
+    <section id="resume-section" class="py-16">
+        <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">Resume</h2>
+            <p class="text-base md:text-lg text-center">Explore my experience and skills in web development...</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                <div class="bg-[#666262] rounded-xl p-4">
+                    <h3 class="text-2xl font-extrabold text-[#a88172]">2017-2021</h3>
+                    <h4 class="text-xl font-semibold">Bsc Telecommunication Engineering</h4>
+                    <p class="text-base font-medium">Ghana Communication Technology University</p>
+                    <p class="text-base">Telecommunications Engineering graduate...</p>
+                </div>
+                <div class="bg-[#474545] rounded-xl p-4">
+                    <h3 class="text-2xl font-extrabold text-[#a88172]">2018-2020</h3>
+                    <h4 class="text-xl font-semibold">Web Designer</h4>
+                    <p class="text-base font-medium">BlueTicks Technologies</p>
+                    <p class="text-base">Collaborated with customers...</p>
+                </div>
+                <div class="bg-[#474545] rounded-xl p-4">
+                    <h3 class="text-2xl font-extrabold text-[#a88172]">In progress</h3>
+                    <h4 class="text-xl font-semibold">Msc Information Technology Management</h4>
+                    <p class="text-base font-medium">Berlin School of Business and Innovation</p>
+                    <p class="text-base">The program focuses on...</p>
+                </div>
+                <div class="bg-[#666262] rounded-xl p-4">
+                    <h3 class="text-2xl font-extrabold text-[#a88172]">2021-2023</h3>
+                    <h4 class="text-xl font-semibold">Radio Frequency Engineer</h4>
+                    <p class="text-base font-medium">Vodafone Ghana</p>
+                    <p class="text-base">Analyzed GSM and CDMA networks...</p>
+                </div>
+            </div>
+            <button onclick="downloadCV()" class="rounded-3xl py-2 px-6 text-white bg-[#a88172] font-bold mt-6">Download CV</button>
+        </div>
+    </section>
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- Services -->
+    <section id="services-section" class="py-16">
+        <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">Services</h2>
+            <p class="text-base md:text-lg text-center">Offering front-end and back-end web development services...</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-[#666262] hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/wired/64/a88172/web-design.png" alt="web-design"/>
+                    <p class="text-[#bab4b4]">Web Design</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/ios/50/a88172/requirements.png" alt="requirements"/>
+                    <p class="text-[#bab4b4]">Project Management</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-[#666262] hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/ios/50/a88172/laptop-coding.png" alt="laptop-coding"/>
+                    <p class="text-[#bab4b4]">Web Development</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/wired/64/a88172/commercial.png" alt="commercial"/>
+                    <p class="text-[#bab4b4]">Digital Marketing</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-[#666262] hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/bullish.png" alt="bullish"/>
+                    <p class="text-[#bab4b4]">Search Engine Optimization</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/a88172/windows10-personalization.png" alt="windows10-personalization"/>
+                    <p class="text-[#bab4b4]">Graphic Designing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- Skills -->
+    <section id="skills-section" class="py-16">
+        <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">Skills</h2>
+            <p class="text-base md:text-lg text-center">Proficient in front-end and back-end development...</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                <div>
+                    <p class="text-[#bab4b4] mb-2">HTML5</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 90%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">Tailwind CSS</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 80%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">JavaScript</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 70%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">WordPress</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 80%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">NodeJs</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 65%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">ReactJS</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 70%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">ExpressJS</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 70%;"></div></div>
+                </div>
+                <div>
+                    <p class="text-[#bab4b4] mb-2">Git</p>
+                    <div class="bg-gray-200 rounded-full h-4"><div class="bg-[#a88172] rounded-full h-4" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- Projects -->
+    <section id="projects-section" class="py-16">
+  <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">My Projects</h2>
+    <p class="text-base md:text-lg text-center">Proficient in front-end and back-end development...</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+      
+      <div>
+        <a href="https://hydrohubws.netlify.app" target="_blank" rel="noopener noreferrer">
+          <img class="w-full h-[250px] object-cover rounded-lg" src="./images/project/project11.png" alt="Construction Website">
+        </a>
+        <h3 class="text-lg font-bold mt-4">Water  Delivery Website</h3>
+        <p class="text-base text-[#bab4b4]">A modern water delivery website...</p>
+      </div>
+
+      <div>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img class="w-full h-[250px] object-cover rounded-lg" src="./images/project/project2.png" alt="Travel Website">
+        </a>
+        <h3 class="text-lg font-bold mt-4">Travel and Tour Website</h3>
+        <p class="text-base text-[#bab4b4]">A vibrant tourism website...</p>
+      </div>
+
+      <div>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img class="w-full h-[250px] object-cover rounded-lg" src="./images/project/project3.png" alt="Cake Website">
+        </a>
+        <h3 class="text-lg font-bold mt-4">The Cake Project</h3>
+        <p class="text-base text-[#bab4b4]">A delightful cake website...</p>
+      </div>
+
+      <div>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img class="w-full h-[250px] object-cover rounded-lg" src="./images/project/project4.png" alt="Interior Designer Website">
+        </a>
+        <h3 class="text-lg font-bold mt-4">Interior Designer Website</h3>
+        <p class="text-base text-[#bab4b4]">An elegant interior decor website...</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
+
+    <!-- Contact -->
+    <section id="contact-section" class="py-16">
+        <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#a88172]">Contact Me</h2>
+            <p class="text-base md:text-lg text-center">Feel free to reach out for collaboration...</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/phone.png" alt="phone"/>
+                    <p>Contact Number</p>
+                    <p class="text-[#bab4b4]">233 (0) 50 653 4498</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <img width="64" height="64" src="https://img.icons8.com/sf-black/64/a88172/email.png" alt="email"/>
+                    <p>E-mail</p>
+                    <p class="text-[#bab4b4]">Jeffreyboakye2131@outlook.com</p>
+                </div>
+                <div class="card flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-white hover:text-black">
+                    <a href="https://github.com/Jnboakye">
+                        <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/github.png" alt="github"/>
+                        <p>GitHub</p>
+                        <p class="text-[#bab4b4]">Jnboakye</p>
                     </a>
-                    <a href="#projects-section">
-                        <button
-                            class="rounded-3xl h-12 w-full md:w-40 text-white border-white border hover:bg-[#a88172] font-bold">MY
-                            WORKS</button>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full md:w-1/3 lg:w-1/3">
-                <img class="opacity-60 w-full" src="./images/image1.png" alt="Image of Jeffrey">
-            </div>
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--About Section-->
-    <section id="about-section"
-        class="min-h-screen bg-cover w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-10 lg:px-20 gap-10 mb-5">
-        <div class="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
-            <img class="w-full h-auto rounded-lg" src="./images/border-image2.png" alt="Image of Jeffrey">
-        </div>
-        <div class="w-full md:w-1/2 lg:w-2/3 flex flex-col gap-5">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">About Me</h1>
-            <p class="text-lg md:text-xl">I am a Web Developer skilled in both front-end and back-end development with a
-                background in telecommunications and IT systems...</p>
-            <p class="text-lg md:text-xl">In addition to web development, I have experience in network optimization...
-            </p>
-            <div class="flex flex-col gap-6">
-                <p class="text-2xl"><span class="font-bold text-[#a88172]">20</span> Projects completed</p>
-                <div>
-                    <a href="#projects-section">
-                        <button class="rounded-3xl h-12 w-full md:w-40 text-white bg-[#a88172] font-bold">View
-                            Projects</button>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
 
-
-    <!--Resume-->
-    <section id="resume-section" class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">Resume</h1>
-            <p class="text-center text-lg md:text-xl">Explore my experience and skills in web development, from
-                front-end to back-end. I've worked on various projects that showcase my ability to create functional,
-                efficient, and user-centric websites. Below, you'll find a detailed look at my technical expertise, work
-                experience, and education.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="bg-[#666262] rounded-xl p-6 flex flex-col gap-5">
-                <h2 class="text-3xl font-extrabold text-[#a88172]">2017-2021</h2>
-                <h3 class="text-2xl font-semibold">Bsc Telecommunication Engineering</h3>
-                <p class="text-lg font-medium">Ghana Communication Technology University</p>
-                <p class="font-normal">Telecommunications Engineering graduate with a solid foundation in networking,
-                    signal processing, and communication systems. My technical background enhances my web development
-                    skills by offering a comprehensive approach to both software and hardware integration.</p>
-            </div>
-
-            <div class="bg-[#474545] rounded-xl p-6 flex flex-col gap-5">
-                <h2 class="text-3xl font-extrabold text-[#a88172]">2018-2020</h2>
-                <h3 class="text-2xl font-semibold">Web Designer</h3>
-                <p class="text-lg font-medium">BlueTicks Technologies</p>
-                <p class="font-normal">Collaborated with customers and design teams to create cross-browser compatible,
-                    user-friendly websites using WordPress, while independently managing small web projects and
-                    contributing to larger team efforts.</p>
-            </div>
-
-            <div class="bg-[#474545] rounded-xl p-6 flex flex-col gap-5">
-                <h2 class="text-3xl font-extrabold text-[#a88172]">In progress</h2>
-                <h3 class="text-2xl font-semibold">Msc Information Technology Management</h3>
-                <p class="text-lg font-medium">Berlin School of Business and Innovation</p>
-                <p class="font-normal">The program focuses on developing advanced skills in managing IT systems,
-                    combining technical knowledge with strategic management to solve business challenges and drive
-                    digital innovation.</p>
-            </div>
-
-            <div class="bg-[#666262] rounded-xl p-6 flex flex-col gap-5">
-                <h2 class="text-3xl font-extrabold text-[#a88172]">2021-2023</h2>
-                <h3 class="text-2xl font-semibold">Radio Frequency Engineer</h3>
-                <p class="text-lg font-medium">Vodafone Ghana</p>
-                <p class="font-normal">Analyzed GSM and CDMA networks, conducted drive tests across 8 regions in Ghana,
-                    identified and resolved performance issues, and used Microsoft Excel for data analysis to improve
-                    wireless network quality and monitor key performance indicators.</p>
-            </div>
-        </div>
-        <div class="flex justify-center mt-10">
-            <!-- <button class="rounded-3xl h-12 w-40 text-white bg-[#a88172] font-bold"> <a
-                    href="documents/cv.pdf"></a>DOWNLOAD
-                CV</button> -->
-            <button onclick="downloadCV()" class="rounded-3xl h-12 w-40 text-white bg-[#a88172] font-bold">Download
-                CV</button>
-            <script>
-                function downloadCV() {
-                    // Open the CV in a new tab
-                    window.open('documents/cv.pdf', '_blank');
-                }
-            </script>
-
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--Services-->
-    <section id="services-section" class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">Services</h1>
-            <p class="text-center text-lg md:text-xl">Offering front-end and back-end web development services, I create
-                responsive, user-friendly websites with clean, efficient code. Whether it's building from scratch or
-                improving existing projects, I ensure high-quality, functional results.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="flex flex-col items-center gap-5 hover:bg-[#666262] hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/wired/64/a88172/web-design.png"
-                        alt="web-design" />
-                </div>
-                <p class="text-[#bab4b4]">Web Design</p>
-            </div>
-
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/ios/50/a88172/requirements.png"
-                        alt="requirements" />
-                </div>
-                <p class="text-[#bab4b4]">Project Management</p>
-            </div>
-
-            <div class="flex flex-col items-center gap-5 hover:bg-[#666262] hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/ios/50/a88172/laptop-coding.png"
-                        alt="laptop-coding" />
-                </div>
-                <p class="text-[#bab4b4]">Web Development</p>
-            </div>
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/wired/64/a88172/commercial.png"
-                        alt="commercial" />
-                </div>
-                <p class="text-[#bab4b4]">Digital Marketing</p>
-            </div>
-            <div class="flex flex-col items-center gap-5 hover:bg-[#666262] hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/bullish.png"
-                        alt="bullish" />
-                </div>
-                <p class="text-[#bab4b4]">Search Engine Optimization</p>
-            </div>
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/a88172/windows10-personalization.png"
-                        alt="windows10-personalization" />
-                </div>
-                <p class="text-[#bab4b4]">Graphic Designing</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--Skills-->
-    <section id="skills-section" class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">Skills</h1>
-            <p class="text-center text-lg md:text-xl">Proficient in front-end and back-end development, with skills in
-                WordPress,
-                HTML, CSS, JavaScript, and NodeJS libraries such as ReactJS and ExpressJs. Experienced in responsive
-                design, version control
-                (Git), and integrating APIs to create efficient, user-centric websites.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-                <p class="text-[#bab4b4]">HTML5</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 90%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">Tailwind CSS</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 80%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">JavaScript</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 70%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">WordPress</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 80%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">NodeJs</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 65%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">ReactJS</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 70%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">ExpressJS</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 70%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p class="text-[#bab4b4]">Git</p>
-                <div class="bg-gray-200 rounded-full h-6 w-full">
-                    <div class="bg-[#a88172] rounded-full h-6" style="width: 80%;"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--Projetcs-->
-
-    <section id="projects-section" class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">My Projects</h1>
-            <p class="text-center text-lg md:text-xl">Proficient in front-end and back-end development, with skills in
-                HTML, CSS, JavaScript, and frameworks like React. Experienced in responsive design, version control
-                (Git), and integrating APIs to create efficient, user-centric websites.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-                <div>
-                    <img class="w-full h-auto rounded-lg" src="./images/project/project1.png" alt="">
-                </div>
-                <h2 class="text-xl font-bold mt-4 ">A Construction Website</h2>
-                <p class="text-lg text-[#bab4b4]">A modern construction website built with HTML, CSS, and JavaScript
-                    that showcases
-                    services, projects, and expertise in the construction industry. Designed to be user-friendly and
-                    visually appealing, it provides seamless navigation and responsive layouts for an engaging user
-                    experience.</p>
-            </div>
-
-            <div>
-                <div>
-                    <img class="w-full h-auto rounded-lg" src="./images/project/project2.png" alt="">
-                </div>
-                <h2 class="text-xl font-bold mt-4">Travel and tour website</h2>
-                <p class="text-lg text-[#bab4b4]">A vibrant tourism website crafted with HTML, CSS, and JavaScript,
-                    highlighting top
-                    destinations, travel packages, and local attractions. It offers intuitive navigation, stunning
-                    visuals, and responsive design to inspire and guide travelers on their journey.</p>
-            </div>
-
-            <div>
-                <div>
-                    <img class="w-full h-auto rounded-lg" src="./images/project/project3.png" alt="">
-                </div>
-                <h2 class="text-xl font-bold mt-4">The cake project</h2>
-                <p class="text-lg text-[#bab4b4]">A delightful cake website built with HTML, CSS, and JavaScript,
-                    showcasing a variety
-                    of custom cakes with mouthwatering visuals. The site offers easy navigation, detailed product
-                    descriptions, and a responsive design for an enjoyable user experience across all devices.</p>
-            </div>
-
-            <div>
-                <div>
-                    <img class="w-full h-auto rounded-lg" src="./images/project/project4.png" alt="">
-                </div>
-                <h2 class="text-xl font-bold mt-4">Interior designer Website</h2>
-                <p class="text-lg text-[#bab4b4]">An elegant interior decor website crafted with HTML, CSS, and
-                    JavaScript, featuring a
-                    stylish portfolio of design projects and services. The site provides a seamless browsing experience
-                    with visually appealing layouts, responsive design, and easy access to contact and booking options.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--contact me-->
-
-    <section id="contact-section" class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#a88172]">Contact Me</h1>
-            <p class="text-center text-lg md:text-xl">Feel free to reach out for collaboration, freelance opportunities,
-                or any inquiries. You can contact me via email or connect with me on LinkedIn for more details.</p>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/phone.png"
-                        alt="phone" />
-                </div>
-                <p>Contact Number</p>
-                <p class="text-[#bab4b4]">233 (0) 50 653 4498</p>
-            </div>
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <div>
-                    <img width="64" height="64" src="https://img.icons8.com/sf-black/64/a88172/email.png" alt="email" />
-                </div>
-                <p>E-mail</p>
-                <p class="text-[#bab4b4]">Jeffreyboakye2131@outlook.com</p>
-            </div>
-            <div class="flex flex-col items-center gap-5 hover:bg-white hover:text-black rounded-xl p-6">
-                <a href="https://github.com/Jnboakye">
-                    <div>
-                        <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/a88172/github.png"
-                            alt="github" />
-                    </div>
-                    <p>GitHub</p>
-                    <p class="text-[#bab4b4]">Jnboakye</p>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
-
-    <!--This is the contact page-->
-    <section class="py-20 bg-cover w-full px-6 md:px-10 lg:px-20 mb-5">
-        <div class="flex flex-col md:flex-row gap-10 items-center justify-center">
-            <div class="w-full md:w-1/1 lg:w-1/2">
+    <!-- Contact Form -->
+    <section class="py-16">
+        <div class="flex flex-col md:flex-row gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <div class="w-full md:w-1/2">
                 <img class="w-full h-auto rounded-lg" src="./images/image1.png" alt="Photo of Jeffrey">
             </div>
-            <div class="w-full md:w-1/1 lg:w-1/1">
-                <div class="max-w-md mx-auto p-6 bg-[#f8f9fa] rounded-md shadow-md">
-                    <form action="#" method="POST" class="text-black">
-                        <div class="mb-4">
-                            <label for="name"
-                                class="block text-gray-700 text-sm decoration-black font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name"
-                                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email"
-                                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                placeholder="Subject" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4"
-                                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                placeholder="Your Message" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit"
-                                class="bg-[#a88172] hover:bg-#a88172 text-black font-bold py-2 px-4 rounded-md">Send
-                                Message</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="w-full md:w-1/2">
+                <form action="#" method="POST" class="bg-[#f8f9fa] rounded-md p-6 text-black max-w-md mx-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-md" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-gray-700 font-bold mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-3 py-2 border rounded-md" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-md" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-[#a88172] text-white font-bold py-2 px-4 rounded-md">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <div class="w-1/4 mx-auto h-1 bg-white"></div>
+    <div class="w-1/4 mx-auto h-1 bg-white my-8"></div>
 
-    <footer class="py-10 bg-cover w-full px-6 md:px-10 lg:px-20">
-        <div class="flex flex-col items-center gap-10 mb-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold">Follow my socials</h2>
-            <div class="flex flex-row gap-5 md:gap-10">
-                <div class="heartbeat-icon">
-                    <a href="https://www.linkedin.com/in/jeffrey-nana-boakye"><img width="50" height="50"
-                            src="https://img.icons8.com/ios-filled/50/a88172/linkedin.png" alt="linkedin" /></a>
-                </div>
-
-                <div class="heartbeat-icon">
-                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/facebook-new.png"
-                        alt="www.facebook-new" />
-                </div>
-                <div class="heartbeat-icon">
-                    <a href="https://www.x.com/jaeyblaq2131"><img width="50" height="50"
-                            src="https://img.icons8.com/ios-filled/50/a88172/twitterx--v1.png" alt="twitterx--v1" /></a>
-                </div>
-                <div class="heartbeat-icon">
-                    <a href="https://www.instagram/jaeyblaq2131"><img width="50" height="50"
-                            src="https://img.icons8.com/ios-filled/50/a88172/instagram-new--v1.png"
-                            alt="instagram-new--v1" /></a>
-                </div>
-                <div class="heartbeat-icon">
-                    <a href="https://github.com/Jnboakye"><img width="50" height="50"
-                            src="https://img.icons8.com/ios-filled/50/a88172/github.png" alt="github" /></a>
-
-                </div>
-
-                <div class="heartbeat-icon">
-                    <a href="https://www.tiktok.com/@jaeyblaq2131"><img width="50" height="50"
-                            src="https://img.icons8.com/ios-filled/50/a88172/tiktok--v1.png" alt="tiktok--v1" /></a>
-                </div>
-
-                <div class="heartbeat-icon">
-                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/youtube-play.png"
-                        alt="youtube-play" />
-                </div>
+    <!-- Footer -->
+    <footer class="py-10">
+        <div class="flex flex-col items-center gap-6 px-4 md:px-10 lg:px-20 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold">Follow my socials</h2>
+            <div class="flex flex-row gap-4 md:gap-6">
+                <div class="heartbeat-icon"><a href="https://www.linkedin.com/in/jeffrey-nana-boakye"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/linkedin.png" alt="linkedin"/></a></div>
+                <div class="heartbeat-icon"><a href="https://www.x.com/jaeyblaq2131"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/twitterx--v1.png" alt="twitterx--v1"/></a></div>
+                <div class="heartbeat-icon"><a href="https://www.instagram/jaeyblaq2131"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/instagram-new--v1.png" alt="instagram-new--v1"/></a></div>
+                <div class="heartbeat-icon"><a href="https://github.com/Jnboakye"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/github.png" alt="github"/></a></div>
+                <div class="heartbeat-icon"><a href="https://www.tiktok.com/@jaeyblaq2131"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/a88172/tiktok--v1.png" alt="tiktok--v1"/></a></div>
             </div>
             <p class="text-[#bab4b4]">Copyright ©2025 All rights reserved</p>
         </div>
     </footer>
-
 </body>
-
 </html>

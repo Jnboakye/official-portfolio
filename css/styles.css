@@ -1,7 +1,7 @@
 .nav-link.active {
     color: #a88172;
-    /* Highlight color for active link */
     font-weight: bold;
+    border-bottom: 2px solid #a88172;
 }
 
 .hire-button {
@@ -10,9 +10,7 @@
 
 .hire-button:hover {
     transform: scale(1.05);
-    /* Slightly enlarge on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add a subtle shadow */
 }
 
 .pulse-animation {
@@ -20,59 +18,113 @@
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 @keyframes heartbeat {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .heartbeat-icon {
     animation: heartbeat 1.5s infinite ease-in-out;
 }
 
-.heartbeat-icon:nth-child(1) {
-    animation-delay: 0s;
+.heartbeat-icon:nth-child(1) { animation-delay: 0s; }
+.heartbeat-icon:nth-child(2) { animation-delay: 0.3s; }
+.heartbeat-icon:nth-child(3) { animation-delay: 0.6s; }
+.heartbeat-icon:nth-child(4) { animation-delay: 0.9s; }
+.heartbeat-icon:nth-child(5) { animation-delay: 1.2s; }
+.heartbeat-icon:nth-child(6) { animation-delay: 1.5s; }
+
+/* Hamburger Menu */
+.nav-links {
+    transition: all 0.3s ease-in-out;
 }
 
-.heartbeat-icon:nth-child(2) {
-    animation-delay: 0.3s;
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: #302d2d;
+    padding: 1rem;
+    gap: 1rem;
 }
 
-.heartbeat-icon:nth-child(3) {
-    animation-delay: 0.6s;
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-.heartbeat-icon:nth-child(4) {
-    animation-delay: 0.9s;
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
 }
 
-.heartbeat-icon:nth-child(5) {
-    animation-delay: 1.2s;
-
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.heartbeat-icon:nth-child(6) {
-    animation-delay: 1.5s;
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
 
+    .nav-links li a {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+    }
+
+    section {
+        padding-top: 4rem;
+    }
+
+    h1, h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    button {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex !important;
+    }
+
+    h1, h2 {
+        font-size: 2.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1, h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
 }
